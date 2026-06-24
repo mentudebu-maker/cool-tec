@@ -161,7 +161,7 @@ function Index() {
               Contact
             </a>
           </nav>
-          <a href="#contact" className="btn-gold text-sm hover:[&]:btn-gold-hover">
+          <a href="#contact" className="hidden sm:inline-flex btn-gold text-sm hover:[&]:btn-gold-hover">
             Book Repair <ArrowRight className="w-4 h-4" />
           </a>
         </div>
@@ -174,7 +174,7 @@ function Index() {
           alt="Cool Tec certified technician repairing a home appliance in Addis Ababa"
           width={1536}
           height={1024}
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover object-[80%_top] sm:object-top"
         />
         <div
           className="absolute inset-0"
@@ -185,14 +185,14 @@ function Index() {
         />
         <div className="relative h-full grid lg:grid-cols-2 gap-10 px-10 md:px-16 max-w-7xl mx-auto pt-20">
           <div className="flex flex-col justify-center">
-            <p className="text-xs tracking-[0.3em] uppercase text-gold mb-6">
+            <p className="text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase text-gold mb-4 sm:mb-6">
               Certified Appliance Repair — Addis Ababa &amp; Adama
             </p>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl leading-[1.05] font-semibold">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] font-semibold">
               We Fix Your Home <br />
               Appliances <span className="text-gradient-gold italic">Fast.</span>
             </h1>
-            <p className="mt-6 text-muted-foreground max-w-md leading-relaxed">
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base text-muted-foreground max-w-md leading-relaxed">
               Washing machines, refrigerators, stoves, ovens, generators — our certified
               technicians come to your door anywhere in Addis Ababa and Adama, backed by a 12-month
               warranty.
