@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState, useEffect } from "react";
 import {
   ArrowRight,
   Wrench,
@@ -80,6 +81,16 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const [aboutImgIndex, setAboutImgIndex] = useState(0);
+  const aboutImages = [gImg6, gImg8, gImg1];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAboutImgIndex((prev) => (prev + 1) % aboutImages.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* ── Local Business JSON-LD structured data for Google ── */}
@@ -467,17 +478,20 @@ function Index() {
           </div>
           <div className="relative">
             <div
-              className="aspect-square rounded-full overflow-hidden mx-auto max-w-md"
+              className="aspect-square rounded-full overflow-hidden mx-auto max-w-md relative"
               style={{ boxShadow: "var(--shadow-gold)" }}
             >
-              <img
-                src={aboutImg}
-                alt="Cool Tec technician repairing a home appliance in Addis Ababa"
-                width={1024}
-                height={1024}
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
+              {aboutImages.map((img, idx) => (
+                <img
+                  key={idx}
+                  src={img}
+                  alt="Cool Tec technician repairing a home appliance in Addis Ababa"
+                  loading="lazy"
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                    idx === aboutImgIndex ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>
