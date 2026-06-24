@@ -174,7 +174,7 @@ function Index() {
           alt="Cool Tec certified technician repairing a home appliance in Addis Ababa"
           width={1536}
           height={1024}
-          className="absolute inset-0 w-full h-full object-cover object-[80%_top] sm:object-top"
+          className="absolute inset-0 w-full h-full object-cover object-[60%_top] sm:object-top"
         />
         <div
           className="absolute inset-0"
@@ -197,11 +197,11 @@ function Index() {
               technicians come to your door anywhere in Addis Ababa and Adama, backed by a 12-month
               warranty.
             </p>
-            <div className="mt-8 flex items-center gap-4">
-              <a href="#contact" className="btn-gold">
-                Get a Free Quote <ArrowRight className="w-4 h-4" />
+            <div className="mt-6 sm:mt-8 flex items-center gap-3 sm:gap-4">
+              <a href="#contact" className="btn-gold !px-5 !py-2.5 sm:!px-7 sm:!py-3.5 text-sm sm:text-base whitespace-nowrap">
+                Get a Free Quote <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </a>
-              <a href="#services" className="text-sm text-foreground/80 hover:text-foreground">
+              <a href="#services" className="text-xs sm:text-sm text-foreground/80 hover:text-foreground whitespace-nowrap">
                 View Services →
               </a>
             </div>
