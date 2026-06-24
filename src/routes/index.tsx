@@ -48,6 +48,8 @@ const YOUTUBE_SHORTS = [
   "PF6fe8p8zug",
   "sxH2XcluF2Y",
   "_R8b-HDSf98",
+  "8PMEojbG6L8",
+  "DwTTawfAdUY",
 ];
 
 export const Route = createFileRoute("/")({
