@@ -42,11 +42,11 @@ import sImg6 from "@/assets/download (7).png"; // Vacuum Cleaner / Room cleaner
 
 // ─── YouTube Shorts IDs ───────────────────────────
 const YOUTUBE_SHORTS = [
+  "BplHsYDUPdI",
   "sGOt2vpdog8",
   "PF6fe8p8zug",
   "sxH2XcluF2Y",
   "_R8b-HDSf98",
-  "z2wpNWOXjdc",
 ];
 
 export const Route = createFileRoute("/")({
