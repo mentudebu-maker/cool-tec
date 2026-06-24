@@ -336,7 +336,7 @@ function Index() {
 
           {/* ── In-Progress shots ── */}
           <p className="text-xs tracking-[0.3em] uppercase text-gold mb-6">During Repair</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 mb-14">
             {[
               { img: gImg1, alt: "Technician repairing washing machine control board outdoors", label: "Washing Machine Board Repair" },
               { img: gImg2, alt: "Technician servicing refrigerator evaporator coils", label: "Refrigerator Coil Service" },
@@ -365,8 +365,8 @@ function Index() {
                     In Progress
                   </span>
                 </div>
-                <div className="p-3">
-                  <p className="text-sm font-medium">{item.label}</p>
+                <div className="p-2 sm:p-3">
+                  <p className="text-xs sm:text-sm font-medium leading-tight">{item.label}</p>
                 </div>
               </div>
             ))}
@@ -374,7 +374,7 @@ function Index() {
 
           {/* ── Completed / Team shots ── */}
           <p className="text-xs tracking-[0.3em] uppercase text-gold mb-6">Completed Jobs &amp; Team</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
             {[
               { img: gImg8, alt: "Cool Tec technician with two fully repaired washing machines", label: "Twin Washer Restoration", tag: "Completed" },
               { img: gImg9, alt: "Technician completing top-load washing machine repair", label: "Top-Load Washer Repair", tag: "Completed" },
@@ -403,8 +403,8 @@ function Index() {
                     {item.tag}
                   </span>
                 </div>
-                <div className="p-3">
-                  <p className="text-sm font-medium">{item.label}</p>
+                <div className="p-2 sm:p-3">
+                  <p className="text-xs sm:text-sm font-medium leading-tight">{item.label}</p>
                 </div>
               </div>
             ))}
