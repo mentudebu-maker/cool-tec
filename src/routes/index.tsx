@@ -84,6 +84,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const [aboutImgIndex, setAboutImgIndex] = useState(0);
+  const [isSocialOpen, setIsSocialOpen] = useState(false);
   const aboutImages = [gImg6, gImg8, gImg1];
 
   useEffect(() => {
@@ -597,7 +598,13 @@ function Index() {
 
       {/* ═══════════════════  FLOATING SOCIAL WIDGET  ═══════════════════ */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 group">
-        <div className="flex flex-col gap-2 translate-y-4 opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+        <div 
+          className={`flex flex-col gap-2 transition-all duration-300 ${
+            isSocialOpen
+              ? "translate-y-0 opacity-100 pointer-events-auto"
+              : "translate-y-4 opacity-0 pointer-events-none md:group-hover:pointer-events-auto md:group-hover:translate-y-0 md:group-hover:opacity-100"
+          }`}
+        >
           <a
             href="https://www.tiktok.com/@eliterepaircenter?_r=1"
             target="_blank"
@@ -624,6 +631,7 @@ function Index() {
           </a>
         </div>
         <button
+          onClick={() => setIsSocialOpen(!isSocialOpen)}
           className="w-14 h-14 bg-gold rounded-full flex items-center justify-center text-background shadow-lg hover:scale-105 transition-transform"
           style={{ boxShadow: "var(--shadow-gold)" }}
         >
